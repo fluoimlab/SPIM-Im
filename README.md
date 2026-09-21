@@ -81,7 +81,7 @@ Pylon Viewer v7.2 camera parameters, category __Digital I/O Control__:
 - __Line Selector:__ Line 2
 - __Line Inverter:__ not selected
 - __Line Mode:__ Output
-- __Line Source:__ Acquisition Active
+- __Line Source:__ Exposure Active
 
 <p align="center">
 <img src="4_pic/pylon_io_config.png" width="700"></a>
@@ -96,21 +96,24 @@ Synchronisation with [Arduino32bitBoards](https://micro-manager.org/Arduino32bit
 
 __Pinout:__
 - Trigger: __Pin 5 - camera Line 2 input__
-- Channel 1: __Pin 25/DAC - Level Converter ON__
-- Channel 2: __Pin 26/DAC - 510 nm trigger__
-- Channel 3: __Pin 27/PWM - 640 nm trigger__
-- Channel 4: Pin 15/PWM
-- Channel 5: Pin 14/PWM
-- Channel 6: Pin 4/PWM
-- Channel 7: Pin 23/PWM
-- Channel 8: Pin 19/PWM
+- Channel 1 (index 0): __Pin 25/DAC - Level Converter ON__
+- Channel 2 (index 1): __Pin 26/DAC - 510 nm trigger__
+- Channel 3 (index 2): __Pin 27/PWM - 640 nm trigger__
+- Channel 4 (index 3): Pin 15/PWM
+- Channel 5 (index 4): Pin 14/PWM
+- Channel 6 (index 5): Pin 4/PWM
+- Channel 7 (index 6): Pin 23/PWM
+- Channel 8 (index 7): Pin 19/PWM
+
+__Decimal switch state value for ON is 2^index.__
 
 __Switch states__
-|Laser|Pin Hight|State|
+|State|Pin Hight|State|
 |-|-|-|
-|510 nm|25+26 (Ch.1+Ch.2)|3|
-|640 nm|25+27 (Ch.1+Ch.3)|4 (not working)|
-|510 nm + 640 nm|25+26+27 (Ch.1+Ch.2+Ch.3)|6 (not working)|
+|Level Converter ON|25|1|
+|510 nm|25+26 (Ch.1+Ch.2)|1+2=__3__|
+|640 nm|25+27 (Ch.1+Ch.3)|1+4=__5__|
+|510 nm + 640 nm|25+26+27 (Ch.1+Ch.2+Ch.3)|1+2+4=__7__|
 
 ## Hardware config
 
