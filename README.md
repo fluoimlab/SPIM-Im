@@ -23,7 +23,7 @@ __L-SPIM v0__
 | Lateral resolution, FWHM theoretical/estimated | 1.12 μm/2.06 μm                                              |
 | Axial resolution, FWHM theoretical/estimated   | 11.70 μm/ 6.32 μm                                            |
 | Excitation lasers                              | 510 nm, 640 nm                                               |
-| Emission filters                               | Chroma HQ545/40m, Chroma D620/20m                            |
+| Emission filters                               | Chroma HQ545/40m, Chroma D620/20m, Chroma HQ700/75m          |
 
 # Detection arm
 
