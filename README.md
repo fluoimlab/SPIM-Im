@@ -1,7 +1,7 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-team.svg)](https://stand-with-ukraine.pp.ua)
 
-Selective Plane Illumination Microscopy Setup
-==================================
+Selective Plane Illumination Microscope
+================================
 
 _Fluorescence Imaging Laboratory, Kyiv, Ukraine_
 
@@ -47,6 +47,9 @@ __L-SPIM v0__
 
 ## Lasers
 
+- 510 nm: 2.2 mW in imaging chamber
+- 640 nm: 1.2 mW in imaging chamber
+
 
 # Control software
 ## Micromanager configuration
@@ -88,7 +91,11 @@ Pylon Viewer v7.2 camera parameters, category __Digital I/O Control__:
 </p>
 
 ## Sync
+### ArdiunoMM
+- Bauderate: 57600
+- Responce timeout: 2000 ms
 
+### Arduino32Bit (deprecated)
 Synchronisation with [Arduino32bitBoards](https://micro-manager.org/Arduino32bitBoards), specs for ESP32:
 
 - Baudrate: 115200
@@ -114,8 +121,6 @@ __Switch states__
 |510 nm|25+26 (Ch.1+Ch.2)|1+2=__3__|
 |640 nm|25+27 (Ch.1+Ch.3)|1+4=__5__|
 |510 nm + 640 nm|25+26+27 (Ch.1+Ch.2+Ch.3)|1+2+4=__7__|
-
-## Hardware config
 
 
 # License 
