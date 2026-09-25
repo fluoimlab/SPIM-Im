@@ -15,10 +15,10 @@ __L-SPIM v0__
 | Parameter                                      | Value                                                        |
 | ---------------------------------------------- | ------------------------------------------------------------ |
 | Detection objective                            | Olympus PlaN 10x 0.25                                        |
-| Magnification                                  | 5.56x                                                        |
+| Magnification                                  | 5.56x (F100) or 6.94x (F125)                                 |
 | Camera                                         | Basler Ace 2R Pro (a2A5320-23umPRO), 5320x3032 px (16.1 Mpx) |
-| Pixel size                                     | 0.493 μm/px                                                  |
-| Field of view                                  | 2.62x1.49 mm                                                 |
+| Pixel size                                     | 0.493 μm/px (F100) or 0.395 μm/px (F125)                     |
+| Field of view                                  | 2.62x1.49 mm (F100) or 2.1x1.2 mm (F125)                     |
 | Z-stack step resolution                        | 16 μstep/μm (0.0625 μm/μstep)                                |
 | Lateral resolution, FWHM theoretical/estimated | 1.12 μm/2.06 μm                                              |
 | Axial resolution, FWHM theoretical/estimated   | 11.70 μm/ 6.32 μm                                            |
@@ -31,21 +31,32 @@ __L-SPIM v0__
 | Parameter                                              | Value                               |
 | ------------------------------------------------------ | ----------------------------------- |
 | Detection objective                                    | Olympus PlaN 10x 0.25 FN 22 (F18)   |
-| Detection tube lens                                    | F100                                |
-| Magnification                                          | ~5.56x                              |
+| Detection tube lens                                    | F100 or F125                        |
+| Magnification                                          | 5.56x or 6.94x                      |
 | Camera                                                 | Basler Ace 2R Pro (a2A5320-23umPRO) |
-| Pixel size                                             | 0.493 μm/px                         |
-| Field of view                                          | 2.62x1.49 mm                        |
+| Pixel size                                             | 0.493 μm/px or 0.395 μm/px          |
+| Field of view                                          | 2.62x1.49 mm or 2.1x1.2 mm          |
 | Theoretical resolution (500 nm)                        | 1.220 μm                            |
 | Theoretical depth of field (500 nm, n=1.33)            | 10.640 μm                           |
+| Estimated resolution FWHM (F100)                       | 2.06 μm                             |
+| Estimated depth of field FWHM (F100)                   | 6.32 μm                             |
 | Z-stack step (Sutter Instruments MPC-200 with MP225/M) | 0.0625 μm/μstep (16 μstep/μm)       |
 
 ## Filters
 
 # Excitation arm
 ## Light path
+Illumination objective 4x (F45)
 
-## Lasers
+Full FOV light sheet parameters:
+- __Tubus lens F125__
+FOV high 2.1 mm => d = 2.1 => $NA_{ill}$ = d / 2f = 2.1/(2*45) = 0.023
+
+$x_{ls} \approx \frac{2 n \lambda}{\pi NA_{ill}^2} = \frac{2 * 1.33 * 510}{3.14 * 0.023^2} = 817 \mu m$
+
+$z_{ls} \approx \frac{2 \lambda}{\pi NA_{ill}} = \frac{2 * 510}{3.14 * 0.023} = 14.1 \mu m$
+
+## Lasers power
 
 - 510 nm: 2.2 mW in imaging chamber
 - 640 nm: 1.2 mW in imaging chamber
