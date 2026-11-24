@@ -103,8 +103,15 @@ Pylon Viewer v7.2 camera parameters, category __Digital I/O Control__:
 
 ## Sync
 ### ArdiunoMM
+Sync with [Arduino](https://micro-manager.org/Arduino).
+
 - Bauderate: 57600
 - Responce timeout: 2000 ms
+
+__Pinout:__
+- Trigger: __Pin 2 - camera GPIO Line 2 input__
+- Output 1 (bit 0): __pin 8 - 510 nm trigger__
+- Output 2 (bit 1): __pin 9 - 640 nm trigger__
 
 ### Arduino32Bit (deprecated)
 Synchronisation with [Arduino32bitBoards](https://micro-manager.org/Arduino32bitBoards), specs for ESP32:
